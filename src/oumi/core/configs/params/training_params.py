@@ -61,6 +61,13 @@ class TrainerType(Enum):
     library, suitable for a wide range of training tasks.
     """
 
+    UNSLOTH = "unsloth"
+    """Generic UnslothTrainer trainer from `unsloth` library.
+
+    This is the standard trainer provided by the `unsloth`
+    library, suitable for a wide range of training tasks.
+    """
+
     OUMI = "oumi"
     """Custom generic trainer implementation.
 

@@ -102,6 +102,10 @@ def build_trainer(
         return _create_hf_builder_fn(trl.GRPOTrainer)
     elif trainer_type == TrainerType.HF:
         return _create_hf_builder_fn(transformers.Trainer)
+    elif trainer_type == TrainerType.UNSLOTH:
+        import unsloth
+
+        return _create_hf_builder_fn(unsloth.trainer.UnslothTrainer)
     elif trainer_type == TrainerType.OUMI:
         warnings.warn(
             "OUMI trainer is still in alpha mode. "
